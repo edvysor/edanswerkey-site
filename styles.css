@@ -363,32 +363,72 @@ h3 {
   display: block;
 }
 
-.feed-links {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 0.55rem 0.9rem;
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-
-.feed-links span {
-  font-weight: 800;
-}
-
-.feed-links a {
-  color: var(--black);
-  font-weight: 900;
-  text-decoration-color: var(--red);
-  text-underline-offset: 4px;
-}
-
 .info-grid,
 .episode-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+}
+
+.episodes-heading {
+  align-items: start;
+}
+
+.archive-summary {
+  max-width: 340px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+.archive-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.season-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.season-tab,
+.archive-toggle {
+  min-height: 40px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+  color: var(--black);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.season-tab {
+  padding: 0.55rem 0.75rem;
+}
+
+.season-tab.active {
+  border-color: var(--black);
+  background: var(--black);
+  color: var(--white);
+}
+
+.archive-toggle {
+  flex: 0 0 auto;
+  padding: 0.55rem 0.85rem;
+  color: var(--red-dark);
+}
+
+.archive-toggle:hover,
+.season-tab:hover {
+  border-color: var(--red);
 }
 
 .info-card,
@@ -594,13 +634,25 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .feed-links {
-    justify-content: start;
-  }
-
   .info-grid,
   .episode-grid {
     grid-template-columns: 1fr;
+  }
+
+  .episodes-heading,
+  .archive-controls {
+    display: block;
+  }
+
+  .archive-summary {
+    max-width: none;
+    margin-top: 1rem;
+    text-align: left;
+  }
+
+  .archive-toggle {
+    width: 100%;
+    margin-top: 0.9rem;
   }
 
   .footer-contact {

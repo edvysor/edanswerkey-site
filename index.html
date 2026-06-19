@@ -82,8 +82,7 @@
             <p class="eyebrow">Listen</p>
             <h2 id="listen-title">The Ed Answer Key, wherever you listen.</h2>
             <p>
-              Follow the show on your preferred platform, or use the feed links
-              if you manage podcasts manually.
+              Follow the show on Apple Podcasts, Spotify, or YouTube.
             </p>
           </div>
 
@@ -104,14 +103,6 @@
                 <img src="assets/youtube-podcast-badge.png" alt="" class="platform-badge" width="282" height="56" />
                 <span class="sr-only">YouTube</span>
               </a>
-            </div>
-
-            <div class="feed-links" aria-label="Podcast feed links">
-              <span>Feed links</span>
-              <!-- Main RSS feed from Libsyn. -->
-              <a href="https://feeds.libsyn.com/494513/rss">RSS</a>
-              <!-- Libsyn uses the main RSS feed for now. Replace this with the public Libsyn show page if one is provided. -->
-              <a href="https://feeds.libsyn.com/494513/rss">Libsyn</a>
             </div>
           </div>
         </div>
@@ -153,8 +144,8 @@
               do next, and how clearer understanding can lead to better support.
             </p>
             <div class="featured-player" data-featured-player></div>
-            <a class="button primary" href="https://feeds.libsyn.com/494513/rss" aria-label="Listen to the featured episode" data-featured-link>
-              Listen to Episode
+            <a class="button primary" href="https://open.spotify.com/show/1nI3c3wb9c8AM3nR69lkrk?si=U3t4IHy3SdSpH0IDJgbH9Q" aria-label="Listen to The Ed Answer Key on Spotify" data-featured-link>
+              Listen on Spotify
             </a>
           </div>
         </div>
@@ -162,49 +153,68 @@
 
       <section class="section episodes-section" id="episodes" aria-labelledby="episodes-title">
         <div class="shell">
-          <div class="section-heading">
-            <p class="eyebrow">Latest episodes</p>
-            <h2 id="episodes-title">Recent conversations</h2>
+          <div class="section-heading episodes-heading">
+            <div>
+              <p class="eyebrow">Episodes</p>
+              <h2 id="episodes-title">Explore the archive.</h2>
+            </div>
+            <p class="archive-summary" data-archive-summary>
+              More than 50 recorded conversations across multiple seasons.
+            </p>
           </div>
 
-          <!-- Latest episodes are loaded from the Libsyn RSS feed in script.js. Edit the RSS_FEED_URL value there if the feed changes. -->
+          <div class="archive-controls" aria-label="Episode archive controls">
+            <div class="season-tabs" data-season-tabs>
+              <button class="season-tab active" type="button" data-season-filter="latest">
+                Latest
+              </button>
+              <button class="season-tab" type="button" data-season-filter="all">
+                All Episodes
+              </button>
+            </div>
+            <button class="archive-toggle" type="button" data-archive-toggle>
+              View all episodes
+            </button>
+          </div>
+
+          <!-- Episode data is loaded from the podcast host feed in script.js. Edit RSS_FEED_URL there if the feed changes. -->
           <div class="episode-grid" id="episode-grid" aria-live="polite">
             <!-- Fallback cards shown if JavaScript is disabled or the RSS feed cannot be loaded. -->
             <article class="episode-card">
               <p class="episode-number">Episode 13</p>
               <h3>The Eighth Wonder: A Sisterhood That Lasts</h3>
               <p class="episode-description">A moving reflection on friendship, faith, and a bond built across nearly seven decades.</p>
-              <a href="https://feeds.libsyn.com/494513/rss">Open RSS Feed</a>
+              <a href="https://open.spotify.com/show/1nI3c3wb9c8AM3nR69lkrk?si=U3t4IHy3SdSpH0IDJgbH9Q">Listen on Spotify</a>
             </article>
             <article class="episode-card">
               <p class="episode-number">Episode 12</p>
               <h3>Cowgirls, Educators, and Healers: Childhood Dreams Revisited</h3>
               <p class="episode-description">A warm look at childhood dreams, identity, and the people we imagined becoming.</p>
-              <a href="https://feeds.libsyn.com/494513/rss">Open RSS Feed</a>
+              <a href="https://open.spotify.com/show/1nI3c3wb9c8AM3nR69lkrk?si=U3t4IHy3SdSpH0IDJgbH9Q">Listen on Spotify</a>
             </article>
             <article class="episode-card">
               <p class="episode-number">Episode 11</p>
               <h3>Socks, Fidgets, &amp; Pink Flowers: Hilarious Memories from School Days</h3>
               <p class="episode-description">School memories that connect humor, belonging, and the lasting shape of childhood.</p>
-              <a href="https://feeds.libsyn.com/494513/rss">Open RSS Feed</a>
+              <a href="https://open.spotify.com/show/1nI3c3wb9c8AM3nR69lkrk?si=U3t4IHy3SdSpH0IDJgbH9Q">Listen on Spotify</a>
             </article>
             <article class="episode-card">
               <p class="episode-number">Episode 10</p>
               <h3>When We Know Better, We Do Better: Building a Future for All Children</h3>
               <p class="episode-description">What changes when adults choose clarity, care, and shared responsibility for children?</p>
-              <a href="https://feeds.libsyn.com/494513/rss">Open RSS Feed</a>
+              <a href="https://open.spotify.com/show/1nI3c3wb9c8AM3nR69lkrk?si=U3t4IHy3SdSpH0IDJgbH9Q">Listen on Spotify</a>
             </article>
             <article class="episode-card">
               <p class="episode-number">Episode 09</p>
               <h3>Public vs. Private: The Pressure of Standardized Testing</h3>
               <p class="episode-description">A focused conversation about testing pressure and what families should understand.</p>
-              <a href="https://feeds.libsyn.com/494513/rss">Open RSS Feed</a>
+              <a href="https://open.spotify.com/show/1nI3c3wb9c8AM3nR69lkrk?si=U3t4IHy3SdSpH0IDJgbH9Q">Listen on Spotify</a>
             </article>
             <article class="episode-card">
               <p class="episode-number">Episode 08</p>
               <h3>Hungry for More: How Schools Support Social Needs</h3>
               <p class="episode-description">A practical look at how schools see and support needs beyond academics.</p>
-              <a href="https://feeds.libsyn.com/494513/rss">Open RSS Feed</a>
+              <a href="https://open.spotify.com/show/1nI3c3wb9c8AM3nR69lkrk?si=U3t4IHy3SdSpH0IDJgbH9Q">Listen on Spotify</a>
             </article>
           </div>
         </div>
@@ -259,8 +269,6 @@
           <a href="https://www.youtube.com/channel/UCsEi4_Nhm8T19pORPqo6PrQ" aria-label="Open The Ed Answer Key on YouTube">
             <img src="assets/youtube-podcast-badge.png" alt="" class="footer-youtube-badge" width="282" height="56" />
           </a>
-          <!-- Main RSS feed from Libsyn. -->
-          <a href="https://feeds.libsyn.com/494513/rss">RSS</a>
           <!-- Replace Instagram placeholder URL below. -->
           <a href="https://example.com/instagram">Instagram</a>
         </div>
