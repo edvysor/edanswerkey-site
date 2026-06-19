@@ -1,6 +1,12 @@
 const RSS_FEED_URL = "https://feeds.libsyn.com/494513/rss";
 const SPOTIFY_SHOW_URL =
   "https://open.spotify.com/show/1nI3c3wb9c8AM3nR69lkrk?si=U3t4IHy3SdSpH0IDJgbH9Q";
+const SEASON_BACKGROUNDS = {
+  1: "assets/season-1-spring.jpg",
+  2: "assets/season-2-summer.jpg",
+  3: "assets/season-3-fall.jpg",
+  4: "assets/season-4-winter.jpg",
+};
 const FEATURED_EPISODE_TITLE =
   "When We Know Better, We Do Better: Building a Future for All Children";
 const EPISODE_LIMIT = 6;
@@ -136,7 +142,11 @@ function updateArchiveState(visibleCount) {
 
 function createEpisodeCard(episode) {
   const card = document.createElement("article");
-  card.className = "episode-card";
+  card.className = `episode-card season-card season-${episode.season || "default"}`;
+
+  if (SEASON_BACKGROUNDS[episode.season]) {
+    card.style.setProperty("--episode-bg", `url("${SEASON_BACKGROUNDS[episode.season]}")`);
+  }
 
   const meta = document.createElement("p");
   meta.className = "episode-number";
