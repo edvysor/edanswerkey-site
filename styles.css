@@ -383,57 +383,56 @@ h3 {
   text-align: right;
 }
 
-.archive-controls {
+.archive-toolbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
   margin-bottom: 1.25rem;
-  padding: 0.75rem;
+  padding: 1rem;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--bg);
 }
 
-.season-tabs {
+.archive-stat {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  align-items: baseline;
+  gap: 0.55rem;
+  color: var(--muted);
+  font-weight: 800;
 }
 
-.season-tab,
-.archive-toggle {
-  min-height: 40px;
+.archive-stat strong {
+  color: var(--red-dark);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1;
+}
+
+.archive-select-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--black);
+  font-size: 0.92rem;
+  font-weight: 900;
+}
+
+.archive-select {
+  min-width: 210px;
+  min-height: 44px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--white);
   color: var(--black);
-  cursor: pointer;
   font: inherit;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 900;
   line-height: 1;
+  padding: 0 2.3rem 0 0.85rem;
 }
 
-.season-tab {
-  padding: 0.55rem 0.75rem;
-}
-
-.season-tab.active {
-  border-color: var(--black);
-  background: var(--black);
-  color: var(--white);
-}
-
-.archive-toggle {
-  flex: 0 0 auto;
-  padding: 0.55rem 0.85rem;
-  background: var(--white);
-  color: var(--red-dark);
-}
-
-.archive-toggle:hover,
-.season-tab:hover {
+.archive-select:hover {
   border-color: var(--red);
 }
 
@@ -646,7 +645,7 @@ h3 {
   }
 
   .episodes-heading,
-  .archive-controls {
+  .archive-toolbar {
     display: block;
   }
 
@@ -656,9 +655,14 @@ h3 {
     text-align: left;
   }
 
-  .archive-toggle {
+  .archive-select-label {
+    display: grid;
+    gap: 0.45rem;
+    margin-top: 0.85rem;
+  }
+
+  .archive-select {
     width: 100%;
-    margin-top: 0.9rem;
   }
 
   .footer-contact {

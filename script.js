@@ -7,8 +7,8 @@ const EPISODE_LIMIT = 6;
 
 const episodeGrid = document.querySelector("#episode-grid");
 const archiveSummary = document.querySelector("[data-archive-summary]");
-const archiveToggle = document.querySelector("[data-archive-toggle]");
-const seasonTabs = document.querySelector("[data-season-tabs]");
+const archiveFilter = document.querySelector("[data-archive-filter]");
+const episodeCount = document.querySelector("[data-episode-count]");
 const featuredTitle = document.querySelector("[data-featured-title]");
 const featuredDescription = document.querySelector("[data-featured-description]");
 const featuredPlayer = document.querySelector("[data-featured-player]");
@@ -72,44 +72,27 @@ function renderArchiveControls(episodes) {
 
   const seasons = getSeasons(episodes);
 
+  if (episodeCount) {
+    episodeCount.textContent = episodes.length;
+  }
+
   if (archiveSummary) {
     archiveSummary.textContent = `${episodes.length} recorded conversations across ${seasons.length} seasons.`;
   }
 
-  if (seasonTabs) {
-    const fragment = document.createDocumentFragment();
-    fragment.append(createSeasonButton("latest", "Latest"));
-    fragment.append(createSeasonButton("all", "All Episodes"));
-
+  if (archiveFilter) {
     seasons.forEach((season) => {
-      fragment.append(createSeasonButton(season, `Season ${season}`));
+      const option = document.createElement("option");
+      option.value = season;
+      option.textContent = `Season ${season}`;
+      archiveFilter.append(option);
     });
 
-    seasonTabs.replaceChildren(fragment);
-  }
-
-  if (archiveToggle) {
-    archiveToggle.addEventListener("click", () => {
-      activeFilter = activeFilter === "all" ? "latest" : "all";
+    archiveFilter.addEventListener("change", (event) => {
+      activeFilter = event.target.value;
       renderEpisodes();
     });
   }
-}
-
-function createSeasonButton(filter, label) {
-  const button = document.createElement("button");
-  button.className = "season-tab";
-  button.type = "button";
-  button.dataset.seasonFilter = filter;
-  button.textContent = label;
-  button.setAttribute("aria-pressed", filter === activeFilter ? "true" : "false");
-
-  button.addEventListener("click", () => {
-    activeFilter = filter;
-    renderEpisodes();
-  });
-
-  return button;
 }
 
 function renderEpisodes() {
@@ -133,22 +116,20 @@ function getVisibleEpisodes() {
 }
 
 function updateArchiveState(visibleCount) {
-  document.querySelectorAll(".season-tab").forEach((button) => {
-    const isActive = button.dataset.seasonFilter === activeFilter;
-    button.classList.toggle("active", isActive);
-    button.setAttribute("aria-pressed", isActive ? "true" : "false");
-  });
-
-  if (archiveToggle) {
-    archiveToggle.hidden = activeFilter !== "latest" && activeFilter !== "all";
-    archiveToggle.textContent = activeFilter === "all" ? "Show latest episodes" : "View all episodes";
+  if (archiveFilter) {
+    archiveFilter.value = activeFilter;
   }
 
   if (archiveSummary) {
     const seasons = getSeasons(allEpisodes);
-    const label = activeFilter === "latest"
-      ? `${allEpisodes.length} recorded conversations across ${seasons.length} seasons. Showing the latest ${visibleCount}.`
-      : `Showing ${visibleCount} recorded conversation${visibleCount === 1 ? "" : "s"}.`;
+    let label = `${allEpisodes.length} recorded conversations across ${seasons.length} seasons. Showing the latest ${visibleCount}.`;
+
+    if (activeFilter === "all") {
+      label = `Showing the full archive: ${visibleCount} recorded conversations.`;
+    } else if (activeFilter !== "latest") {
+      label = `Showing Season ${activeFilter}: ${visibleCount} recorded conversation${visibleCount === 1 ? "" : "s"}.`;
+    }
+
     archiveSummary.textContent = label;
   }
 }
