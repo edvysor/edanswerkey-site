@@ -486,38 +486,19 @@ h3 {
   display: flex;
   min-height: 290px;
   flex-direction: column;
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
   padding: 1.2rem;
 }
 
-.season-card::before,
-.season-card::after {
-  position: absolute;
-  inset: 0;
-  content: "";
-  pointer-events: none;
-}
-
-.season-card::before {
-  z-index: 0;
-  background-image: var(--episode-bg);
+.season-card {
+  background-color: var(--surface);
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.78)),
+    linear-gradient(90deg, rgba(255, 250, 247, 0.54), rgba(255, 255, 255, 0.68)),
+    var(--episode-bg);
   background-position: center;
   background-size: cover;
-  opacity: 0.3;
-}
-
-.season-card::after {
-  z-index: 1;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.92)),
-    linear-gradient(90deg, rgba(255, 250, 247, 0.72), rgba(255, 255, 255, 0.84));
-}
-
-.season-card > * {
-  position: relative;
-  z-index: 2;
+  border-color: rgba(169, 15, 21, 0.22);
+  box-shadow: 0 10px 24px rgba(17, 17, 17, 0.08);
 }
 
 .season-1 {
