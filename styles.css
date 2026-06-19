@@ -486,19 +486,32 @@ h3 {
   display: flex;
   min-height: 290px;
   flex-direction: column;
-  padding: 1.2rem;
+  overflow: hidden;
+  padding: 0;
 }
 
 .season-card {
   background-color: var(--surface);
   background-image:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.78)),
-    linear-gradient(90deg, rgba(255, 250, 247, 0.54), rgba(255, 255, 255, 0.68)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.86)),
+    linear-gradient(90deg, rgba(255, 250, 247, 0.66), rgba(255, 255, 255, 0.78)),
     var(--episode-bg);
   background-position: center;
   background-size: cover;
   border-color: rgba(169, 15, 21, 0.22);
   box-shadow: 0 10px 24px rgba(17, 17, 17, 0.08);
+}
+
+.episode-season-art {
+  min-height: 92px;
+  border-bottom: 1px solid rgba(169, 15, 21, 0.16);
+  background-color: #f7f0ec;
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.34)),
+    linear-gradient(90deg, rgba(169, 15, 21, 0.18), rgba(17, 17, 17, 0.04)),
+    var(--episode-bg);
+  background-position: center;
+  background-size: cover;
 }
 
 .season-1 {
@@ -518,7 +531,7 @@ h3 {
 }
 
 .episode-number {
-  margin-bottom: 1rem;
+  margin: 1rem 1.15rem 0.85rem;
   color: var(--red-dark);
   font-size: 0.78rem;
   font-weight: 900;
@@ -527,12 +540,14 @@ h3 {
 }
 
 .episode-card h3 {
+  margin-right: 1.15rem;
+  margin-left: 1.15rem;
   font-size: 1.18rem;
 }
 
 .episode-description {
   flex: 1;
-  margin-bottom: 1rem;
+  margin: 0 1.15rem 1rem;
   color: var(--muted);
   font-size: 0.95rem;
   line-height: 1.5;
@@ -545,7 +560,8 @@ h3 {
 }
 
 .episode-audio {
-  margin-bottom: 0.85rem;
+  width: calc(100% - 2.3rem);
+  margin: auto 1.15rem 1rem;
 }
 
 .featured-player {
@@ -554,6 +570,7 @@ h3 {
 
 .episode-card a {
   width: max-content;
+  margin: auto 1.15rem 1.15rem;
   color: var(--red-dark);
   font-weight: 900;
   text-decoration-thickness: 2px;

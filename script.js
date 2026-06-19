@@ -148,6 +148,10 @@ function createEpisodeCard(episode) {
     card.style.setProperty("--episode-bg", `url("${SEASON_BACKGROUNDS[episode.season]}")`);
   }
 
+  const seasonArt = document.createElement("div");
+  seasonArt.className = "episode-season-art";
+  seasonArt.setAttribute("aria-hidden", "true");
+
   const meta = document.createElement("p");
   meta.className = "episode-number";
   meta.textContent = formatEpisodeMeta(episode);
@@ -166,7 +170,7 @@ function createEpisodeCard(episode) {
   audio.src = episode.audioUrl;
   audio.setAttribute("aria-label", `Listen to ${episode.title}`);
 
-  card.append(meta, title, description);
+  card.append(seasonArt, meta, title, description);
 
   if (episode.audioUrl) {
     card.append(audio);
