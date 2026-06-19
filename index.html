@@ -77,63 +77,42 @@
       </section>
 
       <section class="section listen-section" id="listen" aria-labelledby="listen-title">
-        <div class="shell">
-          <div class="section-heading">
+        <div class="shell listen-layout">
+          <div class="listen-copy">
             <p class="eyebrow">Listen</p>
-            <h2 id="listen-title">Find the podcast</h2>
+            <h2 id="listen-title">The Ed Answer Key, wherever you listen.</h2>
+            <p>
+              Follow the show on your preferred platform, or use the feed links
+              if you manage podcasts manually.
+            </p>
           </div>
 
-          <div class="platform-grid">
-            <!-- Apple Podcasts public link. Replace if Apple provides a direct podcasts.apple.com show URL. -->
-            <a class="platform-link" href="https://share.google/XQiLPSvgnP6iyhw4Z" aria-label="Open The Ed Answer Key on Apple Podcasts">
-              <img src="assets/apple-podcasts-icon.png" alt="" class="platform-icon" width="512" height="512" />
-              <span>Apple Podcasts</span>
-            </a>
-            <!-- Spotify public show page. Do not use the Libsyn Spotify feed here because browsers show it as raw XML. -->
-            <a class="platform-link" href="https://open.spotify.com/show/1nI3c3wb9c8AM3nR69lkrk?si=U3t4IHy3SdSpH0IDJgbH9Q" aria-label="Open The Ed Answer Key on Spotify">
-              <img src="assets/spotify-logo.png" alt="" class="platform-icon" width="2362" height="2362" />
-              <span>Spotify</span>
-            </a>
-            <!-- YouTube channel link for The Ed Answer Key podcast. -->
-            <a class="platform-link" href="https://www.youtube.com/channel/UCsEi4_Nhm8T19pORPqo6PrQ" aria-label="Open The Ed Answer Key on YouTube">
-              <img src="assets/youtube-podcast-badge.png" alt="" class="platform-badge" width="282" height="56" />
-              <span class="sr-only">YouTube</span>
-            </a>
-            <!-- Main RSS feed from Libsyn. -->
-            <a class="platform-link" href="https://feeds.libsyn.com/494513/rss" aria-label="Open The Ed Answer Key RSS feed">
-              <span class="rss-mark" aria-hidden="true">RSS</span>
-              <span>RSS / Libsyn</span>
-            </a>
-          </div>
-        </div>
-      </section>
+          <div class="listen-panel">
+            <div class="platform-grid" aria-label="Podcast platforms">
+              <!-- Temporary Apple Podcasts search link. Replace with the direct podcasts.apple.com show URL when available. -->
+              <a class="platform-link" href="https://podcasts.apple.com/us/search?term=The%20Ed%20Answer%20Key" aria-label="Find The Ed Answer Key on Apple Podcasts">
+                <img src="assets/apple-podcasts-icon.png" alt="" class="platform-icon" width="512" height="512" />
+                <span>Apple Podcasts</span>
+              </a>
+              <!-- Spotify public show page. Do not use the Libsyn Spotify feed here because browsers show it as raw XML. -->
+              <a class="platform-link" href="https://open.spotify.com/show/1nI3c3wb9c8AM3nR69lkrk?si=U3t4IHy3SdSpH0IDJgbH9Q" aria-label="Open The Ed Answer Key on Spotify">
+                <img src="assets/spotify-logo.png" alt="" class="platform-icon" width="2362" height="2362" />
+                <span>Spotify</span>
+              </a>
+              <!-- YouTube channel link for The Ed Answer Key podcast. -->
+              <a class="platform-link youtube-platform" href="https://www.youtube.com/channel/UCsEi4_Nhm8T19pORPqo6PrQ" aria-label="Open The Ed Answer Key on YouTube">
+                <img src="assets/youtube-podcast-badge.png" alt="" class="platform-badge" width="282" height="56" />
+                <span class="sr-only">YouTube</span>
+              </a>
+            </div>
 
-      <section class="section subscribe-section" aria-labelledby="subscribe-title">
-        <div class="shell subscribe-grid">
-          <div class="section-heading compact">
-            <p class="eyebrow">Subscribe</p>
-            <h2 id="subscribe-title">Choose your listening app.</h2>
-          </div>
-
-          <div class="subscribe-actions" aria-label="Subscribe to The Ed Answer Key">
-            <!-- Apple Podcasts public link. Replace if Apple provides a direct podcasts.apple.com show URL. -->
-            <a class="button secondary" href="https://share.google/XQiLPSvgnP6iyhw4Z" aria-label="Open The Ed Answer Key on Apple Podcasts">
-              <img src="assets/apple-podcasts-icon.png" alt="" class="button-icon" width="512" height="512" />
-              Apple Podcasts
-            </a>
-            <!-- Spotify public show page. Do not use the Libsyn Spotify feed here because browsers show it as raw XML. -->
-            <a class="button primary" href="https://open.spotify.com/show/1nI3c3wb9c8AM3nR69lkrk?si=U3t4IHy3SdSpH0IDJgbH9Q" aria-label="Open The Ed Answer Key on Spotify">
-              <img src="assets/spotify-logo.png" alt="" class="button-icon" width="2362" height="2362" />
-              Spotify
-            </a>
-            <!-- Main RSS feed from Libsyn. -->
-            <a class="button secondary" href="https://feeds.libsyn.com/494513/rss" aria-label="Subscribe to The Ed Answer Key using the RSS feed">
-              RSS Feed
-            </a>
-            <!-- Libsyn uses the main RSS feed for now. Replace this with the public Libsyn show page if one is provided. -->
-            <a class="button secondary" href="https://feeds.libsyn.com/494513/rss" aria-label="Open The Ed Answer Key on Libsyn">
-              Libsyn
-            </a>
+            <div class="feed-links" aria-label="Podcast feed links">
+              <span>Feed links</span>
+              <!-- Main RSS feed from Libsyn. -->
+              <a href="https://feeds.libsyn.com/494513/rss">RSS</a>
+              <!-- Libsyn uses the main RSS feed for now. Replace this with the public Libsyn show page if one is provided. -->
+              <a href="https://feeds.libsyn.com/494513/rss">Libsyn</a>
+            </div>
           </div>
         </div>
       </section>
@@ -266,8 +245,8 @@
         </div>
 
         <div class="footer-links" aria-label="Podcast and social links">
-          <!-- Apple Podcasts public link. Replace if Apple provides a direct podcasts.apple.com show URL. -->
-          <a href="https://share.google/XQiLPSvgnP6iyhw4Z" aria-label="Open The Ed Answer Key on Apple Podcasts">
+          <!-- Temporary Apple Podcasts search link. Replace with the direct podcasts.apple.com show URL when available. -->
+          <a href="https://podcasts.apple.com/us/search?term=The%20Ed%20Answer%20Key" aria-label="Find The Ed Answer Key on Apple Podcasts">
             <img src="assets/apple-podcasts-icon.png" alt="" class="footer-platform-icon" width="512" height="512" />
             Apple
           </a>
