@@ -501,7 +501,7 @@ h3 {
 }
 
 .season-card::before {
-  z-index: -2;
+  z-index: 0;
   background-image: var(--episode-bg);
   background-position: center;
   background-size: cover;
@@ -509,10 +509,15 @@ h3 {
 }
 
 .season-card::after {
-  z-index: -1;
+  z-index: 1;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.92)),
     linear-gradient(90deg, rgba(255, 250, 247, 0.72), rgba(255, 255, 255, 0.84));
+}
+
+.season-card > * {
+  position: relative;
+  z-index: 2;
 }
 
 .season-1 {
