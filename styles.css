@@ -389,6 +389,10 @@ h3 {
   justify-content: space-between;
   gap: 1rem;
   margin-bottom: 1.25rem;
+  padding: 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg);
 }
 
 .season-tabs {
@@ -408,6 +412,7 @@ h3 {
   font: inherit;
   font-size: 0.9rem;
   font-weight: 900;
+  line-height: 1;
 }
 
 .season-tab {
@@ -423,6 +428,7 @@ h3 {
 .archive-toggle {
   flex: 0 0 auto;
   padding: 0.55rem 0.85rem;
+  background: var(--white);
   color: var(--red-dark);
 }
 
